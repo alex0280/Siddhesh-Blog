@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Transaction Processing</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .wrapper {
+            width: 85%;
+            margin: auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            margin-top: 30px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.7;
+        }
+        .box {
+            background: #ecf0f1;
+            padding: 12px;
+            border-left: 6px solid #3498db;
+            margin-top: 10px;
+            color: #2c3e50;
+        }
+        .img-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .img-section img {
+            width: 75%;
+            max-width: 550px;
+            border-radius: 12px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Understanding Transaction Processing</h1>
+        
+        <h2>Definition of a Transaction</h2>
+        <p>A transaction is a logical unit of work in a database system that consists of a sequence of operations. It ensures data remains consistent and adheres to integrity constraints.</p>
+        
+        <h2>Key Transaction Properties</h2>
+        <Center>
+        <img src="photo4" height="250" width="500">
+        </Center> 
+        <p>The ACID properties define reliable transaction processing:</p>
+        <div class="box">
+            <ul>
+                <li><strong>Atomicity</strong> - A transaction is either fully completed or not executed at all.</li>
+                <li><strong>Consistency</strong> - Transactions must maintain database integrity.</li>
+                <li><strong>Isolation</strong> - The execution of transactions remains independent.</li>
+                <li><strong>Durability</strong> - Changes made by committed transactions persist permanently.</li>
+            </ul>
+        </div>
+        
+        <h2>Recoverability in Schedules</h2>
+        <Center>
+        <img src="photo5" height="200" width="550">
+        </Center> 
+        <p>Based on recoverability, schedules can be categorized into:</p>
+        <div class="box">
+            <ul>
+                <li><strong>Recoverable Schedules</strong> - Ensure committed transactions are not undone.</li>
+                <li><strong>Cascadeless Schedules</strong> - Prevent cascading rollbacks by committing dependent transactions in order.</li>
+                <li><strong>Strict Schedules</strong> - Ensure no transaction reads uncommitted data.</li>
+            </ul>
+        </div>
+        
+        <h2>Serializability in Schedules</h2>
+        <Center>
+        <img src="photo6" height="300" width="550">
+        </Center> 
+        <p>Types of serializability include:</p>
+        <div class="box">
+            <ul>
+                <li><strong>Conflict Serializability</strong> - Transactions can be reordered to form a serial execution.</li>
+                <li><strong>View Serializability</strong> - Transactions yield the same results as a serial schedule.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
